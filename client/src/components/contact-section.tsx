@@ -73,7 +73,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-1">Email</h3>
-                  <p className="text-slate-600 dark:text-slate-400">contact@mlvision-portfolio.com</p>
+                  <p className="text-slate-600 dark:text-slate-400">[your-email@domain.com]</p>
                 </div>
               </div>
               
@@ -85,7 +85,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-1">LinkedIn</h3>
-                  <p className="text-slate-600 dark:text-slate-400">linkedin.com/in/mlvision-expert</p>
+                  <p className="text-slate-600 dark:text-slate-400">[your-linkedin-profile]</p>
                 </div>
               </div>
               
@@ -97,7 +97,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-1">GitHub</h3>
-                  <p className="text-slate-600 dark:text-slate-400">github.com/mlvision-expert</p>
+                  <p className="text-slate-600 dark:text-slate-400">[your-github-username]</p>
                 </div>
               </div>
               

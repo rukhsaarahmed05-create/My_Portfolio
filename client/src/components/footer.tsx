@@ -11,7 +11,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <div className="text-2xl font-bold text-white mb-4">ML Vision Portfolio</div>
+            <div className="text-2xl font-bold text-white mb-4">[Your Name] - ML Portfolio</div>
             <p className="text-slate-400 mb-6 max-w-md">
               Developing cutting-edge machine vision and deep learning solutions 
               to solve complex real-world problems.

@@ -14,7 +14,7 @@ export function HeroSection() {
         <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
           <div className="mb-10 lg:mb-0">
             <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 dark:text-slate-100 mb-6">
-              Machine Vision & 
+              [Your Name] - Machine Vision & 
               <span className="text-brand-600 dark:text-brand-400"> Deep Learning</span>
               Expert
             </h1>
