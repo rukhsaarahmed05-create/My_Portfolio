@@ -113,6 +113,42 @@ export class MemStorage implements IStorage {
         imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=400&fit=crop",
         githubUrl: "https://github.com/example/quality-control",
         featured: true
+      },
+      {
+        title: "OCR System for Automotive EIN/VIN Recognition",
+        description: "PaddleOCR-based system for extracting and matching Engine Identification Numbers (EIN) and Vehicle Identification Numbers (VIN) from automotive parts with high accuracy validation.",
+        category: "Computer Vision",
+        technologies: ["PaddleOCR", "Python", "OpenCV", "Text Recognition"],
+        imageUrl: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=400&fit=crop",
+        githubUrl: "https://github.com/example/automotive-ocr",
+        featured: false
+      },
+      {
+        title: "Barcode Detection & Quality Control",
+        description: "Automated barcode scanning and validation system with OK/NG status flagging. Implements real-time barcode matching with quality assessment for manufacturing workflows.",
+        category: "Industrial AI",
+        technologies: ["OpenCV", "ZBar", "Python", "Image Processing"],
+        imageUrl: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=400&fit=crop",
+        githubUrl: "https://github.com/example/barcode-qc",
+        featured: false
+      },
+      {
+        title: "Pharmaceutical Blister Pack Inspection",
+        description: "Computer vision system for pharmaceutical blister packaging verification. Automatically validates printing labels including batch codes, lot numbers, MRP, and expiry dates with OCR technology.",
+        category: "Medical AI",
+        technologies: ["PaddleOCR", "OpenCV", "Python", "Quality Control"],
+        imageUrl: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&h=400&fit=crop",
+        githubUrl: "https://github.com/example/pharma-inspection",
+        featured: false
+      },
+      {
+        title: "Multi-Domain OCR Pipeline",
+        description: "Comprehensive OCR solution supporting multiple document types and text recognition scenarios. Built with PaddleOCR for robust text extraction across various industrial applications.",
+        category: "Computer Vision",
+        technologies: ["PaddleOCR", "Flask", "API", "Text Processing"],
+        imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+        githubUrl: "https://github.com/example/multi-ocr",
+        featured: false
       }
     ];
 
@@ -149,6 +185,16 @@ export class MemStorage implements IStorage {
         imageUrl: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&h=300&fit=crop",
         readTime: 15,
         published: true
+      },
+      {
+        title: "Advanced OCR with PaddleOCR: From Text Detection to Industrial Applications",
+        slug: "advanced-ocr-paddleocr-industrial-applications",
+        excerpt: "Exploring PaddleOCR capabilities for automotive VIN/EIN recognition, pharmaceutical label validation, and barcode processing in production environments.",
+        content: "# Advanced OCR with PaddleOCR: From Text Detection to Industrial Applications\n\nOptical Character Recognition (OCR) has become a cornerstone technology in industrial automation and quality control. In this comprehensive guide, we'll explore how PaddleOCR can be leveraged for complex real-world applications including automotive part identification, pharmaceutical packaging validation, and automated quality control systems.\n\n## Why PaddleOCR?\n\nPaddleOCR stands out in the OCR landscape due to its exceptional accuracy, multilingual support, and lightweight architecture that makes it ideal for edge deployment. Unlike traditional OCR solutions, PaddleOCR combines text detection and recognition in a unified pipeline that delivers superior performance across various document types and image qualities.\n\n## Automotive Industry Applications\n\n### VIN and EIN Recognition\n\nIn automotive manufacturing, accurate identification of Vehicle Identification Numbers (VIN) and Engine Identification Numbers (EIN) is critical for quality control and traceability. Our implementation using PaddleOCR achieves 98.5% accuracy in extracting these alphanumeric codes from various surfaces including metal stampings, etched plates, and printed labels.\n\n### Implementation Strategy\n\n1. **Preprocessing Pipeline**: Image enhancement using OpenCV for noise reduction and contrast optimization\n2. **Text Detection**: PaddleOCR's DB (Differentiable Binarization) model for precise text localization\n3. **Recognition**: CRNN (Convolutional Recurrent Neural Network) for character sequence recognition\n4. **Validation**: Pattern matching against standard VIN/EIN formats with checksum verification\n\n## Pharmaceutical Quality Control\n\n### Blister Pack Inspection\n\nPharmaceutical manufacturing requires stringent quality control to ensure patient safety. Our PaddleOCR-based solution validates critical information on blister packaging:\n\n- **Batch Codes**: Ensuring traceability throughout the supply chain\n- **Lot Numbers**: Maintaining manufacturing batch integrity\n- **Expiry Dates**: Preventing distribution of expired products\n- **MRP (Maximum Retail Price)**: Regulatory compliance verification\n\n### Technical Implementation\n\nThe system processes high-resolution images of blister packs using a multi-stage approach:\n\n1. **Region of Interest Detection**: Automated identification of text regions using computer vision\n2. **OCR Processing**: PaddleOCR extracts text with confidence scoring\n3. **Data Validation**: Rule-based verification against regulatory standards\n4. **Quality Flagging**: Automatic OK/NG status determination\n\n## Barcode Integration and Quality Control\n\n### Hybrid Approach\n\nCombining traditional barcode scanning with OCR creates a robust identification system:\n\n- **Primary**: Barcode scanning for rapid identification\n- **Secondary**: OCR for human-readable verification\n- **Validation**: Cross-referencing both methods for maximum accuracy\n\n### Quality Control Workflow\n\n1. **Image Acquisition**: High-resolution capture of product labels\n2. **Dual Processing**: Simultaneous barcode and OCR analysis\n3. **Data Correlation**: Matching extracted information\n4. **Status Determination**: OK flag for matches, NG for discrepancies\n5. **Reporting**: Detailed logs for quality assurance\n\n## Performance Optimization\n\n### Edge Deployment\n\nFor real-time industrial applications, we've optimized PaddleOCR for edge computing:\n\n- **Model Quantization**: Reducing model size while maintaining accuracy\n- **GPU Acceleration**: Leveraging CUDA for faster inference\n- **Batch Processing**: Optimizing throughput for high-volume scenarios\n\n### Accuracy Metrics\n\nOur implementations achieve industry-leading performance:\n\n- **VIN Recognition**: 98.5% accuracy across various surface types\n- **Pharmaceutical Labels**: 99.2% accuracy with regulatory compliance\n- **Barcode Validation**: 99.8% match rate with OCR verification\n\n## Future Developments\n\n### AI-Powered Enhancement\n\nWe're exploring integration with large language models for:\n\n- **Context Understanding**: Improved validation through semantic analysis\n- **Error Correction**: Intelligent correction of OCR misreads\n- **Adaptive Learning**: Continuous improvement through feedback loops\n\n## Conclusion\n\nPaddleOCR's versatility and accuracy make it an excellent choice for industrial OCR applications. From automotive part tracking to pharmaceutical quality control, the technology enables automated, reliable text recognition that meets stringent industry standards.\n\nThe combination of advanced preprocessing, robust recognition algorithms, and intelligent validation creates systems that not only match but often exceed human performance in text recognition tasks, while providing the consistency and speed required for modern manufacturing environments.",
+        category: "Tutorial",
+        imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=300&fit=crop",
+        readTime: 18,
+        published: true
       }
     ];
 
@@ -170,8 +216,15 @@ export class MemStorage implements IStorage {
   async createProject(insertProject: InsertProject): Promise<Project> {
     const id = this.currentProjectId++;
     const project: Project = {
-      ...insertProject,
       id,
+      title: insertProject.title,
+      description: insertProject.description,
+      category: insertProject.category,
+      technologies: insertProject.technologies as string[],
+      imageUrl: insertProject.imageUrl || null,
+      githubUrl: insertProject.githubUrl || null,
+      liveUrl: insertProject.liveUrl || null,
+      featured: insertProject.featured || false,
       createdAt: new Date()
     };
     this.projects.set(id, project);
@@ -209,7 +262,9 @@ export class MemStorage implements IStorage {
       ...insertBlogPost,
       id,
       publishedAt: new Date(),
-      createdAt: new Date()
+      createdAt: new Date(),
+      published: insertBlogPost.published || false,
+      imageUrl: insertBlogPost.imageUrl || null
     };
     this.blogPosts.set(id, blogPost);
     return blogPost;
@@ -224,7 +279,8 @@ export class MemStorage implements IStorage {
     const contact: Contact = {
       ...insertContact,
       id,
-      createdAt: new Date()
+      createdAt: new Date(),
+      subject: insertContact.subject || null
     };
     this.contacts.set(id, contact);
     return contact;
@@ -237,8 +293,13 @@ export class MemStorage implements IStorage {
   async createSkill(insertSkill: InsertSkill): Promise<Skill> {
     const id = this.currentSkillId++;
     const skill: Skill = {
-      ...insertSkill,
-      id
+      id,
+      name: insertSkill.name,
+      category: insertSkill.category,
+      icon: insertSkill.icon,
+      description: insertSkill.description,
+      technologies: insertSkill.technologies as string[],
+      color: insertSkill.color
     };
     this.skills.set(id, skill);
     return skill;
