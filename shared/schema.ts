@@ -5,10 +5,12 @@ import { z } from "zod";
 export const projects = pgTable("projects", {
   id: serial("id").primaryKey(),
   title: text("title").notNull(),
+  subtitle: text("subtitle"),
   description: text("description").notNull(),
   category: text("category").notNull(),
   technologies: json("technologies").$type<string[]>().notNull(),
   imageUrl: text("image_url"),
+  additionalImages: json("additional_images").$type<string[]>(),
   githubUrl: text("github_url"),
   liveUrl: text("live_url"),
   featured: boolean("featured").default(false),

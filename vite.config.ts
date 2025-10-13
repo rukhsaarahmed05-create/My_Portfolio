@@ -16,6 +16,7 @@ export default defineConfig({
         ]
       : []),
   ],
+  base:"/Rukhsar-Portfolio",
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),

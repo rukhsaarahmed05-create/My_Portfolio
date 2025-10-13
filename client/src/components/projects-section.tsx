@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -117,11 +118,18 @@ export function ProjectsSection() {
                     )}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-1">
                   {project.title}
                 </h3>
-                <p className="text-slate-600 dark:text-slate-400 mb-4">
-                  {project.description}
+                {project.subtitle && (
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mb-2">
+                    {project.subtitle}
+                  </p>
+                )}
+                <p className="text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">
+                  {project.description.length > 150 
+                    ? `${project.description.substring(0, 150)}...` 
+                    : project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
@@ -132,8 +140,11 @@ export function ProjectsSection() {
                 </div>
                 <Button 
                   className="w-full bg-brand-600 hover:bg-brand-700 text-white py-2 rounded-lg font-medium transition-colors"
+                  asChild
                 >
-                  View Details
+                  <Link href={`/project/${project.id}`}>
+                    View Details
+                  </Link>
                 </Button>
               </CardContent>
             </Card>

@@ -29,24 +29,59 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Blog posts endpoints
+  // // Blog posts endpoints
+  // app.get("/api/blog-posts", async (req, res) => {
+  //   try {
+  //     const published = req.query.published === "true";
+  //     const query = req.query.q as string;
+      
+  //     let blogPosts;
+  //     if (query) {
+  //       blogPosts = await storage.searchBlogPosts(query);
+  //     } else {
+  //       blogPosts = await storage.getBlogPosts(published);
+  //     }
+      
+  //     res.json(blogPosts);
+  //   } catch (error) {
+  //     res.status(500).json({ message: "Failed to fetch blog posts" });
+  //   }
+  // });
+
+
   app.get("/api/blog-posts", async (req, res) => {
     try {
-      const published = req.query.published === "true";
-      const query = req.query.q as string;
-      
-      let blogPosts;
-      if (query) {
-        blogPosts = await storage.searchBlogPosts(query);
-      } else {
-        blogPosts = await storage.getBlogPosts(published);
+      // Convert query param to string and normalize
+      const publishedStr = String(req.query.published || "");
+      const published =
+        publishedStr.toLowerCase() === "true" ||
+        publishedStr === "1";
+
+      const q = String(req.query.q || "");
+
+      // Get posts (all if no published param)
+      let blogPosts = await storage.getBlogPosts(
+        publishedStr ? published : undefined
+      );
+
+      // Apply search filter if needed
+      if (q) {
+        const searchTerm = q.toLowerCase();
+        blogPosts = blogPosts.filter(
+          post =>
+            post.title.toLowerCase().includes(searchTerm) ||
+            post.excerpt.toLowerCase().includes(searchTerm) ||
+            post.category.toLowerCase().includes(searchTerm)
+        );
       }
-      
+
       res.json(blogPosts);
     } catch (error) {
+      console.error(error);
       res.status(500).json({ message: "Failed to fetch blog posts" });
     }
   });
+
 
   app.get("/api/blog-posts/:id", async (req, res) => {
     try {

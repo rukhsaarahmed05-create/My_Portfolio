@@ -1,4 +1,5 @@
 import express, { type Request, Response, NextFunction } from "express";
+import path from "path";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
@@ -39,6 +40,9 @@ app.use((req, res, next) => {
 (async () => {
   const server = await registerRoutes(app);
 
+  // Serve static images from the repository's Images directory at /Images/*
+  app.use("/Images", express.static(path.resolve(import.meta.dirname, "..", "Images")));
+
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
     const message = err.message || "Internal Server Error";
@@ -59,12 +63,20 @@ app.use((req, res, next) => {
   // ALWAYS serve the app on port 5000
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
+//   const port = 5000;
+//   server.listen({
+//     port,
+//     host: "0.0.0.0",
+//     reusePort: true,
+//   }, () => {
+//     log(`serving on port ${port}`);
+//   });
+// })();
+
   const port = 5000;
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`serving on port ${port}`);
-  });
+
+  server.listen(port, 'localhost', () => {
+    log(`serving on http://localhost:${port}`);
+});
 })();
+

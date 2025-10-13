@@ -129,13 +129,55 @@ export default function ProjectDetail() {
                 </div>
               </div>
               
-              <h1 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-2">
                 {project.title}
               </h1>
+              {project.subtitle && (
+                <p className="text-xl text-slate-500 dark:text-slate-400 mb-4">
+                  {project.subtitle}
+                </p>
+              )}
               
-              <p className="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                {project.description}
-              </p>
+              <div className="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                {project.description.split('\n').map((paragraph, index) => {
+                  if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
+                    // Bold text
+                    const boldText = paragraph.slice(2, -2);
+                    return (
+                      <p key={index} className="font-bold text-slate-900 dark:text-slate-100 mt-4 mb-2">
+                        {boldText}
+                      </p>
+                    );
+                  } else if (paragraph.trim()) {
+                    // Regular paragraph
+                    return (
+                      <p key={index} className="mb-3">
+                        {paragraph}
+                      </p>
+                    );
+                  }
+                  return null;
+                })}
+              </div>
+              
+              {project.additionalImages && project.additionalImages.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-3">
+                    Project Gallery
+                  </h3>
+                  <div className="space-y-4">
+                    {project.additionalImages.map((imageUrl, index) => (
+                      <div key={index} className="rounded-lg overflow-hidden shadow-md">
+                        <img 
+                          src={imageUrl} 
+                          alt={`${project.title} - Image ${index + 1}`}
+                          className="w-full hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
               
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-3">

@@ -10,9 +10,43 @@ import type { BlogPost } from "@shared/schema";
 export function BlogSection() {
   const [searchQuery, setSearchQuery] = useState("");
   
-  const { data: blogPosts, isLoading } = useQuery<BlogPost[]>({
-    queryKey: ["/api/blog-posts", { published: true, q: searchQuery }],
-  });
+  // const { data: blogPosts, isLoading } = useQuery<BlogPost[]>({
+  //   queryKey: ["/api/blog-posts", { published: true, q: searchQuery }],
+  // });
+
+  // const { data: blogPosts, isLoading } = useQuery<BlogPost[]>({
+  //   queryKey: ["/api/blog-posts", { published: true, q: searchQuery }],
+  // });
+
+  const fetchBlogPosts = async ({ queryKey }: { queryKey: [string, Record<string, any>] }) => {
+  const [_key, params] = queryKey;
+  const url = new URL(_key, window.location.origin);
+
+  if (params && typeof params === "object") {
+    Object.entries(params).forEach(([k, v]) => {
+      if (v !== undefined && v !== "") {
+        url.searchParams.append(k, String(v));
+      }
+    });
+  }
+
+  const res = await fetch(url.toString());
+  if (!res.ok) throw new Error("Failed to fetch blog posts");
+  return res.json();
+};
+
+const { data: blogPosts, isLoading } = useQuery<BlogPost[]>({
+  queryKey: ["/api/blog-posts", { published: true, q: searchQuery }],
+  queryFn: fetchBlogPosts
+});
+
+
+
+
+
+
+
+
 
   const getCategoryColor = (category: string) => {
     const colorMap: Record<string, string> = {
