@@ -1,6 +1,6 @@
 {
   "name": "rest-express",
-  "homepage": "https://rukhsaarahmed05-create.github.io/Rukhsar-Portfolio",
+  "homepage": "https://rukhsaarahmed05-create.github.io/My_Portfolio",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
@@ -97,6 +97,7 @@
     "cross-env": "^10.1.0",
     "drizzle-kit": "^0.30.4",
     "esbuild": "^0.25.0",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.19.1",
