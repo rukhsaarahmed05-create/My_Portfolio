@@ -59,8 +59,10 @@ export default defineConfig({
     },
   },
   root: path.resolve(__dirname, "client"),
+  publicDir: path.resolve(__dirname, "public"), // ✅ add this line
   build: {
     outDir: path.resolve(__dirname, "dist"), // ✅ must be just "dist"
     emptyOutDir: true,
+    copyPublicDir: true, // ✅ this line is the key
   },
 });
