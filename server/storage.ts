@@ -330,8 +330,6 @@ export class MemStorage implements IStorage {
       },
 
 
-
-
       {
         title: "AI-Powered Crankcase Inspection: Real-Time Detection, Counting, and Quality Assurance",
         description: "In modern manufacturing, quality and precision are non-negotiable. A single missing bolt, plug, or bearing in a crankcase assembly can compromise the reliability of the entire engine, leading to costly failures and downtime. Traditional manual inspections are time-consuming, error-prone, and difficult to scale.\nThis is where AI-powered crankcase inspection comes in. By leveraging advanced computer vision models like Object Detection, combined with image augmentations and real-time processing, enterprises can now automate detection, counting, and validation of crankcase components—ensuring every unit meets quality standards before leaving the assembly line.\n**Why AI for Crankcase Inspection?**\nThe crankcase is a critical component that houses and supports moving engine parts. Any deviation in assembly—such as missing bolts or incorrectly placed bearings—can cause:\n⚠️ Mechanical failures\n💸 Warranty claims and recalls\n⏳ Production delays\nAI inspection systems solve these challenges by providing:\nConsistent accuracy (no human fatigue or oversight)\nScalable quality control across multiple lines\nInstant OK/NG flagging for real-time decision-making\n **How the AI-Powered System Works**\n1. Training Object Detetection Models for Crankcase Components\nWe start with a large dataset of crankcase images. Each component—bolts, bearings, plugs, guides—is annotated. To improve model robustness, we apply data augmentation such as:\nRotation & perspective changes\nBlur and glare simulation\nNoise and contrast variations\nThe  model is fine-tuned on this dataset, enabling it to detect components accurately even under challenging shop-floor conditions.\n2. Real-Time Detection & Counting\nOnce trained, the model runs in real time:\nCamera captures crankcase assembly images.\n Trained Modeel  detects all visible components.\nA post-processing logic counts each class of component.\nFor example:\nGround truth (expected): {\"Bolt\": 6, \"Bearing\": 2, \"Plug\": 1} \nPredicted: {\"Bolt\": 6, \"Bearing\": 1, \"Plug\": 1}\nIf counts match → OK ✅\nIf mismatch → NG ❌\nBusiness Impact of AI-Powered Inspection\n**Scalability**\nHandles high production volumes.\nEasily retrained for new crankcase designs.\n**Cost Efficiency**\nPrevents defective crankcases from shipping.\nCuts down on rework, warranty claims, and recalls.\n**Faster Production**\nReal-time inspection keeps pace with assembly lines\nReduces bottlenecks compared to manual checks.\n**Data-Driven Insights**\nHistorical inspection logs highlight recurring issues.\nHelps identify supplier defects or process inefficiencies.\n**Real-World Applications**\nAutomotive Manufacturing: Automated inspection of crankcase assemblies in car and truck production.\nAerospace: Ensuring crankcase housings meet strict aviation standards.\nHeavy Equipment: Detecting missing or misaligned parts in crankcases for tractors, excavators, and industrial engines.\nConclusion\nAI-powered crankcase inspection is transforming manufacturing quality control. By combining Object Detection Models detection power, robust image augmentation techniques, and real-time processing, enterprises can achieve zero-defect manufacturing, cut costs, and scale operations with confidence.",
@@ -356,14 +354,12 @@ export class MemStorage implements IStorage {
       },
 
 
-
       {
         title: "AI-Powered Engine OCR: Automating Text and Number Recognition in Manufacturing",
         description: "In today’s smart factories, precision and traceability are as important as quality. Every engine produced must carry a unique set of identifiers—such as serial numbers, VIN codes, and batch IDs—that ensure traceability across the supply chain. Traditionally, these identifiers are read and verified manually, which is:\nSlow\nError-prone\nHard to scale\nWith AI-powered Optical Character Recognition (OCR), manufacturers can now automate the reading and verification of engine numbers, ensuring 100% accuracy, speed, and compliance in real time.\n**Why Engine OCR Matters**\nEngines are stamped or engraved with critical identifiers, but these markings often come with challenges:\nNon-uniform surfaces (metal textures, engravings)\nVariable lighting in factory environments\nDirt, oil, or glare obstructing the text\nDifferent fonts and character styles\nMissing or misreading a single digit can cause traceability failures, leading to warranty disputes, compliance violations, and massive losses.\nEngine OCR solves this by using computer vision + deep learning to reliably detect and read text under challenging real-world conditions.\n**How the Solution Works**\n**1. Image Capture**\nHigh-resolution industrial cameras capture engine surfaces in real time.\nMultiple angles and lighting adjustments ensure visibility of all engraved or printed text.\n**2. Preprocessing & Augmentations**\nRaw images undergo preprocessing for maximum readability:\nContrast enhancement\nGlare and reflection removal\nAdaptive thresholding\nPerspective correction\nThese steps make text clearer before OCR runs.\n**3. OCR with Deep Learning**\nWe integrate state-of-the-art OCR models like PaddleOCR, Tesseract with deep learning backends, or transformer-based OCR models. These models extract engine identifiers such as:\nEngine Number\nVIN Code\nBatch/Serial IDs\n**4. Verification & Validation**\nExtracted text is compared with ERP/MES system records:\n✅ If text matches expected values → OK\n❌ If mismatch or unreadable → NG, triggering alerts for manual inspection.\n**Business Benefits of Engine OCR**\nTraceability at Scale\nEvery engine gets verified instantly.\nEnsures compliance with industry regulations and warranty requirements.\n**Error Reduction**\nEliminates human mistakes in reading complex alphanumeric codes.\n**Speed & Efficiency**\nInspections run in real time, keeping pace with production lines.\n**Cost Savings**\nPrevents defective or mislabeled engines from shipping.\nReduces warranty claims and legal disputes.\n**Analytics & Insights**\nOCR logs provide traceability across the entire supply chain.\n**Real-World Applications**\nAutomotive Plants: Reading and validating VINs & engine serials at assembly.\nHeavy Machinery: Ensuring engines are tracked from production to delivery.\nAerospace: Verifying engraved part IDs for compliance with safety standards.\n**Conclusion**\nAI-powered Engine OCR is redefining how manufacturers handle traceability and compliance. By combining high-resolution imaging, preprocessing, and deep learning-based OCR models, enterprises can ensure every engine is properly identified, logged, and verified—at scale, in real time. ",
         category: "Automotive  AI",
         technologies: ["OCR", "Python", "OpenCV", "Image Processing"],
-        imageUrl: "/Images/Hero-ocrold/78.jpg",
-       
+        imageUrl: "/Images/Hero-ocrold/78.jpg",       
 
         additionalImages: [  
         "/Images/Hero-ocrold/6388.png",
@@ -376,8 +372,7 @@ export class MemStorage implements IStorage {
         "/Images/Hero-ocrold/6419.png",
         "/Images/Hero-ocrold/6422.png",
         "/Images/Hero-ocrold/6424.png",
-        "/Images/Hero-ocrold/6426.png",
-        
+        "/Images/Hero-ocrold/6426.png",        
         ],
         githubUrl: "https://github.com/example/automotive-ocr",
         featured: false
@@ -390,8 +385,6 @@ export class MemStorage implements IStorage {
         category: "Automotive  AI",
         technologies: ["Detection", "Python", "OpenCV", "Image Processing"],
         imageUrl: "/Images/Cylinder_Head/0.jpg",
-       
-
         additionalImages: [
           "/Images/Cylinder_Head/3.jpg",
           "/Images/Cylinder_Head/7.jpg",
@@ -403,7 +396,6 @@ export class MemStorage implements IStorage {
           "/Images/Cylinder_Head/18.jpg",
           "/Images/Cylinder_Head/11.jpg"         
         ],
-
         githubUrl: "https://github.com/example/automotive-ocr",
         featured: false
       },
@@ -416,8 +408,6 @@ export class MemStorage implements IStorage {
         category: "Automotive  AI",
         technologies: ["OCR", "Python", "OpenCV", "Image Processing"],
         imageUrl: "/Images/energy_meter/Image__2024-12-21__11-12-44.jpg",
-      
-
         additionalImages: [
           "/Images/energy_meter/result3.jpg",
           "/Images/energy_meter/result9.jpg",
@@ -429,7 +419,6 @@ export class MemStorage implements IStorage {
           "/Images/energy_meter/result5.jpg",
           "/Images/energy_meter/ result54.jpg",          
         ],
-
         githubUrl: "https://github.com/example/automotive-ocr",
         featured: false
       },
@@ -451,11 +440,9 @@ export class MemStorage implements IStorage {
             "/Images/Glass_Bottle_Inspection/Image__2025-09-15__16-02-11.bmp",
             "/Images/Glass_Bottle_Inspection/Image__2025-09-15__16-03-00.bmp",        
           ],
-
           githubUrl: "https://github.com/example/barcode-qc",
           featured: false
         },  
-
 
 
       {
@@ -464,7 +451,6 @@ export class MemStorage implements IStorage {
           category: "Industrial AI",
           technologies: ["OpenCV", "Leak Detection", "Python", "Image Processing"],
           imageUrl: "/Images/Bosch/Image__2025-04-15__09-59-10.jpg",
-
           
           additionalImages: [
             "/Images/Bosch/Image__2025-04-15__09-59-14.jpg",
@@ -483,8 +469,6 @@ export class MemStorage implements IStorage {
             "/Images/Bosch/Image__2025-04-15__10-36-24.jpg",
             "/Images/Bosch/Image__2025-04-15__11-29-40.jpg",
           ],
-
-
           githubUrl: "https://github.com/example/barcode-qc",
           featured: false
       },  
