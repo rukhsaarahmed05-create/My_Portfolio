@@ -1,23 +1,83 @@
+// {
+//   "include": ["client/src/**/*", "shared/**/*", "server/**/*"],
+//   "exclude": ["node_modules", "build", "dist", "**/*.test.ts"],
+//   "compilerOptions": {
+//     "incremental": true,
+//     "tsBuildInfoFile": "./node_modules/typescript/tsbuildinfo",
+//     "noEmit": true,
+//     "module": "ESNext",
+//     "strict": true,
+//     "lib": ["esnext", "dom", "dom.iterable"],
+//     "jsx": "preserve",
+//     "esModuleInterop": true,
+//     "skipLibCheck": true,
+//     "allowImportingTsExtensions": true,
+//     "moduleResolution": "bundler",
+//     "baseUrl": ".",
+//     "types": ["node", "vite/client"],
+//     "paths": {
+//       "@/*": ["./client/src/*"],
+//       "@shared/*": ["./shared/*"]
+//     }
+//   }
+// }
+
+// 
+
+
 {
-  "include": ["client/src/**/*", "shared/**/*", "server/**/*"],
-  "exclude": ["node_modules", "build", "dist", "**/*.test.ts"],
   "compilerOptions": {
     "incremental": true,
     "tsBuildInfoFile": "./node_modules/typescript/tsbuildinfo",
-    "noEmit": true,
     "module": "ESNext",
-    "strict": true,
+    "target": "ES2020",
+    "moduleResolution": "bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./client/src/*"],
+      "@shared/*": ["./shared/*"],
+      "@server/*": ["./server/*"]
+    },
     "lib": ["esnext", "dom", "dom.iterable"],
     "jsx": "preserve",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "allowImportingTsExtensions": true,
-    "moduleResolution": "bundler",
-    "baseUrl": ".",
-    "types": ["node", "vite/client"],
-    "paths": {
-      "@/*": ["./client/src/*"],
-      "@shared/*": ["./shared/*"]
-    }
-  }
+    "strict": true,
+    "types": ["node", "vite/client"]
+  },
+  "include": [
+    "client/src/**/*",
+    "shared/**/*",
+    "server/**/*",
+    "api/**/*"
+  ],
+  "exclude": ["node_modules", "dist", "build", "**/*.test.ts"]
 }
+
+
+
+// {
+//   "compilerOptions": {
+//     "incremental": true,
+//     "tsBuildInfoFile": "./node_modules/typescript/tsbuildinfo",
+//     "module": "NodeNext",
+//     "target": "ES2020",
+//     "moduleResolution": "NodeNext",
+//     "outDir": "./dist",
+//     "rootDir": ".",
+//     "baseUrl": ".",
+//     "paths": {
+//       "@/*": ["./client/src/*"],
+//       "@shared/*": ["./shared/*"],
+//       "@server/*": ["./server/*"]
+//     },
+//     "lib": ["esnext", "dom", "dom.iterable"],
+//     "jsx": "preserve",
+//     "esModuleInterop": true,
+//     "skipLibCheck": true,
+//     "strict": true,
+//     "types": ["node", "vite/client"]
+//   },
+//   "include": ["client/src/**/*", "shared/**/*", "server/**/*", "api/**/*"],
+//   "exclude": ["node_modules", "dist", "build", "**/*.test.ts"]
+// }

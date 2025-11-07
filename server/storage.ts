@@ -547,7 +547,7 @@ export class MemStorage implements IStorage {
         content: "# Understanding Transformer Architecture in Computer Vision\n\nVision Transformers (ViTs) have revolutionized the field of computer vision...",
         category: "Deep Learning",
         imageUrl: "https://images.unsplash.com/photo-1677442p",
-        githubUrl: "https://github.com/example/multi-oc136019-21780ecad995?w=800&h=300&fit=crop",
+        // githubUrl: "https://github.com/example/multi-oc136019-21780ecad995?w=800&h=300&fit=crop",
         readTime: 8,
         published: true
       },
