@@ -5,5 +5,7 @@
       "runtime": "nodejs18.x",
       "includeFiles": "server/**"
     }
-  }
+  },
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
 }
