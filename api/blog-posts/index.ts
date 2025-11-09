@@ -1,7 +1,9 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 // import { storage } from '../../storage';
 // import { storage } from '@server/storage';
-import { storage } from "@server/storage.js"; // only after tsc-alias replaces it
+// import { storage } from "@server/storage.js"; // only after tsc-alias replaces it
+
+import { storage } from '../../server/storage.js';
 
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {

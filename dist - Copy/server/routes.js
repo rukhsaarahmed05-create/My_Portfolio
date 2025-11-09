@@ -1,14 +1,16 @@
-import { createServer } from "http";
-// import { storage } from "./storage";
-import { storage } from "./storage.js";
-import { insertContactSchema } from "@shared/schema";
-import { z } from "zod";
-export async function registerRoutes(app) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.registerRoutes = registerRoutes;
+const http_1 = require("http");
+const storage_1 = require("./storage");
+const schema_1 = require("@shared/schema");
+const zod_1 = require("zod");
+async function registerRoutes(app) {
     // Projects endpoints
     app.get("/api/projects", async (req, res) => {
         try {
             const category = req.query.category;
-            const projects = await storage.getProjects(category);
+            const projects = await storage_1.storage.getProjects(category);
             res.json(projects);
         }
         catch (error) {
@@ -18,7 +20,7 @@ export async function registerRoutes(app) {
     app.get("/api/projects/:id", async (req, res) => {
         try {
             const id = parseInt(req.params.id);
-            const project = await storage.getProject(id);
+            const project = await storage_1.storage.getProject(id);
             if (!project) {
                 return res.status(404).json({ message: "Project not found" });
             }
@@ -52,7 +54,7 @@ export async function registerRoutes(app) {
                 publishedStr === "1";
             const q = String(req.query.q || "");
             // Get posts (all if no published param)
-            let blogPosts = await storage.getBlogPosts(publishedStr ? published : undefined);
+            let blogPosts = await storage_1.storage.getBlogPosts(publishedStr ? published : undefined);
             // Apply search filter if needed
             if (q) {
                 const searchTerm = q.toLowerCase();
@@ -70,7 +72,7 @@ export async function registerRoutes(app) {
     app.get("/api/blog-posts/:id", async (req, res) => {
         try {
             const id = parseInt(req.params.id);
-            const blogPost = await storage.getBlogPost(id);
+            const blogPost = await storage_1.storage.getBlogPost(id);
             if (!blogPost) {
                 return res.status(404).json({ message: "Blog post not found" });
             }
@@ -83,7 +85,7 @@ export async function registerRoutes(app) {
     app.get("/api/blog-posts/slug/:slug", async (req, res) => {
         try {
             const slug = req.params.slug;
-            const blogPost = await storage.getBlogPostBySlug(slug);
+            const blogPost = await storage_1.storage.getBlogPostBySlug(slug);
             if (!blogPost) {
                 return res.status(404).json({ message: "Blog post not found" });
             }
@@ -96,7 +98,7 @@ export async function registerRoutes(app) {
     // Skills endpoints
     app.get("/api/skills", async (req, res) => {
         try {
-            const skills = await storage.getSkills();
+            const skills = await storage_1.storage.getSkills();
             res.json(skills);
         }
         catch (error) {
@@ -106,15 +108,15 @@ export async function registerRoutes(app) {
     // Contact form endpoint
     app.post("/api/contact", async (req, res) => {
         try {
-            const validatedData = insertContactSchema.parse(req.body);
-            const contact = await storage.createContact(validatedData);
+            const validatedData = schema_1.insertContactSchema.parse(req.body);
+            const contact = await storage_1.storage.createContact(validatedData);
             res.status(201).json({
                 message: "Contact form submitted successfully",
                 id: contact.id
             });
         }
         catch (error) {
-            if (error instanceof z.ZodError) {
+            if (error instanceof zod_1.z.ZodError) {
                 return res.status(400).json({
                     message: "Invalid form data",
                     errors: error.errors
@@ -123,6 +125,6 @@ export async function registerRoutes(app) {
             res.status(500).json({ message: "Failed to submit contact form" });
         }
     });
-    const httpServer = createServer(app);
+    const httpServer = (0, http_1.createServer)(app);
     return httpServer;
 }

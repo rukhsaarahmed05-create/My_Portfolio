@@ -1,12 +1,15 @@
-import express from "express";
-import path from "path";
-// import { registerRoutes } from "./routes";
-// import { setupVite, serveStatic, log } from "./vite";
-import { registerRoutes } from "./routes.js";
-import { setupVite, serveStatic, log } from "./vite.js";
-const app = express();
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const path_1 = __importDefault(require("path"));
+const routes_1 = require("./routes");
+const vite_1 = require("./vite");
+const app = (0, express_1.default)();
+app.use(express_1.default.json());
+app.use(express_1.default.urlencoded({ extended: false }));
 app.use((req, res, next) => {
     const start = Date.now();
     const path = req.path;
@@ -26,15 +29,15 @@ app.use((req, res, next) => {
             if (logLine.length > 80) {
                 logLine = logLine.slice(0, 79) + "…";
             }
-            log(logLine);
+            (0, vite_1.log)(logLine);
         }
     });
     next();
 });
 (async () => {
-    const server = await registerRoutes(app);
+    const server = await (0, routes_1.registerRoutes)(app);
     // Serve static images from the repository's Images directory at /Images/*
-    app.use("/Images", express.static(path.resolve(import.meta.dirname, "..", "Images")));
+    app.use("/Images", express_1.default.static(path_1.default.resolve(import.meta.dirname, "..", "Images")));
     app.use((err, _req, res, _next) => {
         const status = err.status || err.statusCode || 500;
         const message = err.message || "Internal Server Error";
@@ -45,10 +48,10 @@ app.use((req, res, next) => {
     // setting up all the other routes so the catch-all route
     // doesn't interfere with the other routes
     if (app.get("env") === "development") {
-        await setupVite(app, server);
+        await (0, vite_1.setupVite)(app, server);
     }
     else {
-        serveStatic(app);
+        (0, vite_1.serveStatic)(app);
     }
     // ALWAYS serve the app on port 5000
     // this serves both the API and the client.
@@ -64,6 +67,6 @@ app.use((req, res, next) => {
     // })();
     const port = 5000;
     server.listen(port, 'localhost', () => {
-        log(`serving on http://localhost:${port}`);
+        (0, vite_1.log)(`serving on http://localhost:${port}`);
     });
 })();

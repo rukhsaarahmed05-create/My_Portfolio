@@ -1,9 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = handler;
 // import { storage } from '../../storage';
-import { storage } from '@server/storage';
-export default async function handler(req, res) {
+const storage_1 = require("@server/storage");
+async function handler(req, res) {
     try {
         const id = parseInt(req.query.id);
-        const project = await storage.getProject(id);
+        const project = await storage_1.storage.getProject(id);
         if (!project) {
             return res.status(404).json({ message: 'Project not found' });
         }

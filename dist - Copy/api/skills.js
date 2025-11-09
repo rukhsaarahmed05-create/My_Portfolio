@@ -1,8 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = handler;
 // import { storage } from '../storage';
-import { storage } from '@server/storage';
-export default async function handler(req, res) {
+const storage_1 = require("@server/storage");
+async function handler(req, res) {
     try {
-        const skills = await storage.getSkills();
+        const skills = await storage_1.storage.getSkills();
         res.status(200).json(skills);
     }
     catch (error) {
