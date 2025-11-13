@@ -14,9 +14,17 @@
       "config": {
         "includeFiles": ["server/**"]
       }
+    },
+    {
+      "src": "Images/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/api/projects/([0-9]+)",
+      "dest": "/api/projects/[id].ts?id=$1"
+    },
     {
       "src": "/api/(.*)",
       "dest": "/api/$1"
@@ -26,12 +34,13 @@
       "dest": "/assets/$1"
     },
     {
-      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))",
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|webp))",
       "dest": "/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/index.html",
+      "status": 200
     }
   ]
 }

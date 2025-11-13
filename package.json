@@ -10,7 +10,6 @@
     "build": "vite build",
     "vercel:build": "vite build",
     "start": "vite preview"
-    
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
