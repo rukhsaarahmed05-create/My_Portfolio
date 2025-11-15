@@ -496,15 +496,15 @@ export class MemStorage implements IStorage {
         description: "In the pharmaceutical industry, precision and traceability are non-negotiable. Every blister pack must carry accurate information — including batch number, manufacturing date, and expiry date — to ensure patient safety and regulatory compliance. Even the smallest misprint or missing character can lead to product recalls, compliance failures, and brand damage.\nTo address these challenges, manufacturers are turning to automated vision-based Blister Pack Inspection Systems, powered by Optical Character Recognition (OCR) and deep learning.\n**Why Blister Pack Inspection Is Critical**\nPharmaceutical packaging lines handle high-speed printing of variable data like:\nBatch numbers\nManufacturing and expiry dates\nBarcodes or QR codes\nLot codes and serial numbers\nPrinting errors may occur due to:\nInkjet nozzle clogging\nRibbon wear in thermal printers\nMisalignment or smudging\nVariations in foil reflection and lighting\nManual inspection is time-consuming and prone to human error — making AI-driven vision systems essential for real-time verification.\n**Automated Vision-Based Blister Pack Inspection**\nA Pharmaceutical Blister Pack Inspection System uses high-speed cameras and AI algorithms to detect printing errors, OCR mismatches, and code defects in real-time as the packs move along the production conveyor.\n**Key Features**\n**1. Optical Character Recognition (OCR) & Verification (OCV):**\nReads batch code, manufacturing date, and expiry date using OCR.\nCompares recognized text with expected reference data from MES or ERP systems.\n**2. Misprint & Smudge Detection:**\nDetects incomplete, distorted, or blurred characters using image processing and pattern matching.\n**3. Barcode/QR Code Validation:**\nDecodes and verifies serialized barcodes as per GS1 or FDA DSCSA standards.\n**4. Color and Alignment Inspection:**\nEnsures proper printing location and color contrast for regulatory readability.\n**5. Automated Rejection Mechanism:**\nTriggers pneumatic ejector to remove defective packs instantly.",
         category: "Medical AI",
         technologies: ["PaddleOCR", "OpenCV", "Python", "Quality Control"],
-        imageUrl: "/Images/USV/Ocr_res/results/v5/Image__2025-05-01__13-02-20 (copy)_preprocessed_img.jpg",
+        // imageUrl: "/Images/USV/Ocr_res/results/v5/Image__2025-05-01__13-02-20 (copy)_preprocessed_img.jpg",
         
         additionalImages: [
-          "/Images/USV/Ocr_res/results/v3/2.jpg",
-          "/Images/USV/Ocr_res/results/v3/11.jpg",
-          "/Images/USV/Ocr_res/results/v5/Image__2025-06-03__16-55-46_ocr_res_img.jpg",
-          "/Images/USV/Ocr_res/results/v5/Image__2025-05-01__13-01-01 (copy)_ocr_res_img.jpg",
-          "/Images/USV/Ocr_res/results/v5/Image__2025-05-01__13-01-25_ocr_res_img.jpg",
-          "/Images/USV/Ocr_res/results/v5/Image__2025-06-03__16-55-48_ocr_res_img.jpg",
+          // "/Images/USV/Ocr_res/results/v3/2.jpg",
+          // "/Images/USV/Ocr_res/results/v3/11.jpg",
+          // "/Images/USV/Ocr_res/results/v5/Image__2025-06-03__16-55-46_ocr_res_img.jpg",
+          // "/Images/USV/Ocr_res/results/v5/Image__2025-05-01__13-01-01 (copy)_ocr_res_img.jpg",
+          // "/Images/USV/Ocr_res/results/v5/Image__2025-05-01__13-01-25_ocr_res_img.jpg",
+          // "/Images/USV/Ocr_res/results/v5/Image__2025-06-03__16-55-48_ocr_res_img.jpg",
         ],
 
         githubUrl: "https://github.com/example/pharma-inspection",
