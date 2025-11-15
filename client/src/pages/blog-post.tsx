@@ -11,7 +11,7 @@ export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
   
   const { data: blogPost, isLoading, error } = useQuery<BlogPost>({
-    queryKey: [`/api/blog-posts/detail?slug=${slug}`],  // ✅ FIXED: Use proper API endpoint
+    queryKey: [`/api/blog-posts/${slug}`],  // ✅ Matches vercel.json route
     enabled: !!slug,
   });
 
