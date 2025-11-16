@@ -554,7 +554,7 @@ export class MemStorage implements IStorage {
 
       {
         title: "Active Learning",
-        slug: "What is Active Learning and Why should we use It.",
+        slug: "what-is-active-learning-and-why-should-we-use-it",
         excerpt: "Discover active learning, a cost-effective machine learning method that boosts accuracy with fewer labels. Learn how it transforms AI training!",
         content: "# 🚀 Active Learning — The Smart Way to Train AI Faster\n\nIn a traditional AI training workflow, you collect a huge dataset, label everything, train your model, and hope it performs well in production. But here’s the problem — most of that data isn’t equally valuable. Some images, videos, or text samples don’t teach your model anything new, while a few tricky cases can dramatically improve performance.\n\nActive Learning flips this process. Instead of labeling everything blindly, your model itself identifies the most informative or “confusing” samples and asks you to label those first. This means less labeling, faster training, and better results with fewer resources.",
         category: "Deep Learning",
