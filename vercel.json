@@ -13,7 +13,7 @@
       "use": "@vercel/node"
     },
     {
-      "src": "api/blog-posts/detail.ts",
+      "src": "api/blog-posts/by-slug.ts",
       "use": "@vercel/node"
     },
     {
