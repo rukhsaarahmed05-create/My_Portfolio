@@ -1,7 +1,7 @@
 import os
 
 # Folder containing images
-folder = r"C:\Users\Aatif\Desktop\Rukhsar-Portfolio\Images\USV\Ocr_res\results\v5"
+folder = r"C:\Users\Aatif\Desktop\Rukhsar-Portfolio\Images\OCR\Asti\OCR\OK"
 
 for filename in os.listdir(folder):
     # Process only image files (jpg, png, jpeg)
