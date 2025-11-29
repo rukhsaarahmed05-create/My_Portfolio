@@ -275,19 +275,19 @@ export class MemStorage implements IStorage {
         // imageUrl:"/Images/Rice/Image__2025-05-31__10-11-09_.bmp",
 
         additionalImages: [
-          "/Images/sam-results/Rice-Results/Image__2025-05-31__10-00-17_.png",
-          "/Images/sam-results/Rice-Results/Image__2025-05-31__10-01-40_.png",
-          "/Images/sam-results/Rice-Results/Image__2025-05-31__10-02-05_.png",
-          // "/Images/sam-results/Rice-Results/Image__2025-05-31__10-06-30_.png",
-          "/Images/sam-results/Rice-Results/Image__2025-05-31__10-02-45_.png",
-          "/Images/sam-results/Rice-Results/Image__2025-05-31__10-03-27_.png",
-          "/Images/sam-results/Rice-Results/Image__2025-05-31__10-04-28_.png",
-          "/Images/sam-results/Rice-Results/Image__2025-05-31__10-05-27_.png",
-          "/Images/sam-results/Rice-Results/Image__2025-05-31__10-07-20_.png",
-          "/Images/sam-results/Rice-Results/Image__2025-05-31__10-10-58_.png"
+          "/Images/Sam-results/Rice-Results/Image__2025-05-31__10-00-17_.png",
+          "/Images/Sam-results/Rice-Results/Image__2025-05-31__10-01-40_.png",
+          "/Images/Sam-results/Rice-Results/Image__2025-05-31__10-02-05_.png",
+          // "/Images/Sam-results/Rice-Results/Image__2025-05-31__10-06-30_.png",
+          "/Images/Sam-results/Rice-Results/Image__2025-05-31__10-02-45_.png",
+          "/Images/Sam-results/Rice-Results/Image__2025-05-31__10-03-27_.png",
+          "/Images/Sam-results/Rice-Results/Image__2025-05-31__10-04-28_.png",
+          "/Images/Sam-results/Rice-Results/Image__2025-05-31__10-05-27_.png",
+          "/Images/Sam-results/Rice-Results/Image__2025-05-31__10-07-20_.png",
+          "/Images/Sam-results/Rice-Results/Image__2025-05-31__10-10-58_.png"
 
           
-          // "/images/sam-results/Rice-Results/Image__2025-07-30__16-24-33_.png"  
+          // "/images/Sam-results/Rice-Results/Image__2025-07-30__16-24-33_.png"  
         
         ],
 
