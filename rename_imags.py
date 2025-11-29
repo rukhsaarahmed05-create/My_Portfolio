@@ -1,11 +1,11 @@
 import os
 
 # Folder containing images
-folder = r"C:\Users\Aatif\Desktop\Rukhsar-Portfolio\Images\titan\images\bad"
+folder = r"C:\Users\Aatif\Desktop\Rukhsar-Portfolio\Images\USV\Ocr_res\results\v5"
 
 for filename in os.listdir(folder):
     # Process only image files (jpg, png, jpeg)
-    if filename.lower().endswith((".jpg", ".jpeg", ".png")):
+    if filename.lower().endswith((".jpg", ".jpeg", ".png", ".bmp", ".gif")):
         name, ext = os.path.splitext(filename)
         new_name = f"{name}_{ext}"  # add underscore before extension
 
