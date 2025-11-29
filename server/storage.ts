@@ -272,7 +272,7 @@ export class MemStorage implements IStorage {
         category: "Computer Vision",
         technologies: ["YOLO", "OpenCV", "ROS"],
         imageUrl: "/Images/Rice_.png",
-        // imageUrl:"/Images/Rice/Image__2025-05-31__10-11-09.bmp",
+        // imageUrl:"/Images/Rice/Image__2025-05-31__10-11-09_.bmp",
 
         additionalImages: [
           "/Images/sam-results/Rice-Results/Image__2025-05-31__10-00-17_.png",
@@ -443,13 +443,13 @@ export class MemStorage implements IStorage {
           imageUrl: "/Images/Glass_Bottle_Inspection/osw2 (1)_.png",
          
           additionalImages: [
-            "/Images/Glass_Bottle_Inspection/Image__2025-09-04__18-43-08.bmp",  
-            "/Images/Glass_Bottle_Inspection/Image__2025-09-04__18-43-59.bmp",
-            "/Images/Glass_Bottle_Inspection/Image__2025-09-06__12-57-41.bmp",
-            "/Images/Glass_Bottle_Inspection/Image__2025-09-15__15-58-54.bmp",
-            "/Images/Glass_Bottle_Inspection/Image__2025-09-15__15-59-31.bmp",
-            "/Images/Glass_Bottle_Inspection/Image__2025-09-15__16-02-11.bmp",
-            "/Images/Glass_Bottle_Inspection/Image__2025-09-15__16-03-00.bmp",        
+            "/Images/Glass_Bottle_Inspection/Image__2025-09-04__18-43-08_.bmp",  
+            "/Images/Glass_Bottle_Inspection/Image__2025-09-04__18-43-59_.bmp",
+            "/Images/Glass_Bottle_Inspection/Image__2025-09-06__12-57-41_.bmp",
+            "/Images/Glass_Bottle_Inspection/Image__2025-09-15__15-58-54_.bmp",
+            "/Images/Glass_Bottle_Inspection/Image__2025-09-15__15-59-31_.bmp",
+            "/Images/Glass_Bottle_Inspection/Image__2025-09-15__16-02-11_.bmp",
+            "/Images/Glass_Bottle_Inspection/Image__2025-09-15__16-03-00_.bmp",        
           ],
 
           githubUrl: "https://github.com/example/barcode-qc",
