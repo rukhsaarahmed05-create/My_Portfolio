@@ -86,21 +86,44 @@ export class MemStorage implements IStorage {
 
     // Seed projects
     const initialProjects: InsertProject[] = [
+      // {
+      //   title: "Medical Image Analysis",
+      //   subtitle: "AI-Powered Pneumonia Detection System",
+      //   description: "CNN-based system for automated detection of pneumonia in chest X-rays with 95% accuracy using transfer learning.",
+      //   category: "Medical AI",
+      //   technologies: ["PyTorch", "ResNet", "OpenCV"],
+      //   imageUrl: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop",
+      //   additionalImages: [
+      //     "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=400&fit=crop",
+      //     "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop"
+      //   ],
+      //   githubUrl: "https://github.com/example/medical-ai",
+      //   liveUrl: "https://medical-ai-demo.com",
+      //   featured: true
+      // },
+
+
       {
-        title: "Medical Image Analysis",
-        subtitle: "AI-Powered Pneumonia Detection System",
-        description: "CNN-based system for automated detection of pneumonia in chest X-rays with 95% accuracy using transfer learning.",
-        category: "Medical AI",
-        technologies: ["PyTorch", "ResNet", "OpenCV"],
-        imageUrl: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop",
+        title: "Engraved Text on Metal Components: Challenges and Insights",
+        description: "In industrial environments, capturing clear and readable text from metal components is essential for traceability, quality verification, and automated inspection workflows. The image shown here depicts a cast metal mechanical component, likely part of an engine casing or gearbox housing, featuring a faint engraved alphanumeric identification code. These markings usually represent part numbers, batch codes, or manufacturing identifiers.\n Although such markings are critical, making them readable through a camera—especially in automated systems—can be surprisingly difficult. The surface of the component in this case is highly textured cast metal, creating unpredictable reflections and making the engraved characters blend into the background.\n**Key Challenges in Reading Engraved Text**\n 1. Surface Texture & Reflections:\nThe rough, uneven surface of cast metal causes light to scatter in complex ways. This leads to glare spots and shadows that obscure parts of the engraving.\n2. Low Contrast:\nEngraved text often lacks sufficient contrast against the metal background, especially if the engraving is shallow or worn over time.\n3. Variable Lighting Conditions:\nIn industrial settings, lighting can vary significantly—harsh overhead lights, ambient daylight, or even dim environments—further complicating image capture.\n4. Angle & Perspective Distortion:\nCameras positioned at non-ideal angles can introduce perspective distortion, making characters appear skewed or compressed.\n 5. Oil, Dust, and Residue\n Manufacturing environments introduce contamination that degrades image quality and further reduces readability.\n**Techniques for Improving Readability**\nTo enhance the visibility of engraved text on metal components, several image processing techniques can be employed:\n- Controlled Lighting: Using diffuse lighting setups or ring lights to minimize harsh reflections.\n- Image Preprocessing: Applying filters such as histogram equalization, edge detection (e.g., Canny), and contrast enhancement to highlight engraved features.\n- Multi-Angle Imaging: Capturing images from multiple angles to find the best view of the engraving.\n- Machine Learning OCR: Training OCR models specifically on images of engraved text to improve recognition accuracy despite challenging conditions.\nBy addressing these challenges with a combination of hardware setup and software processing, it is possible to reliably read engraved text on metal components—enabling effective automation in quality control and inventory management processes.",
+        category: "Industrial AI",
+        technologies: ["OpenCV", "ZBar", "Python", "Image Processing"],
+        imageUrl: "/Images/Engraved_Metal/OCR_display.png",
+
         additionalImages: [
-          "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=400&fit=crop",
-          "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop"
+          "/Images/Engraved_Metal/0 (2).jpg",
+          "/Images/Engraved_Metal/0.jpg",
+          "/Images/Engraved_Metal/1 (2).jpg",
+          // "/Images/Engraved_Metal/2 (2).jpg",
+          "/Images/Engraved_Metal/2.jpg",
+          "/Images/Engraved_Metal/4.jpg",
+          "/Images/Engraved_Metal/Screenshot from 2025-08-22 12-59-35.png",
+          "/Images/Engraved_Metal/8.jpg"
         ],
-        githubUrl: "https://github.com/example/medical-ai",
-        liveUrl: "https://medical-ai-demo.com",
-        featured: true
-      },
+
+        githubUrl: "https://github.com/example/barcode-qc",
+        featured: false
+      }, 
 
 
       {
@@ -458,6 +481,7 @@ export class MemStorage implements IStorage {
 
 
 
+
       {
         title: "Bubble Leak Detection System in Fuel Pump FCU: Ensuring Reliability in Fuel Control Units",
           description: "In modern aerospace and automotive applications, Fuel Control Units (FCUs) play a critical role in precisely metering fuel flow to the engine. Any form of leakage or air bubble formation inside the FCU can severely impact its performance, efficiency, and safety. To address this, industries are now adopting automated Bubble Leak Detection Systems (BLDS) — a cutting-edge solution that ensures the integrity of fuel systems during production and quality testing.\n**Understanding the Problem: Why Bubbles Matter**Fuel pumps and FCUs are designed for high-precision fuel delivery under strict tolerances. The presence of air bubbles or micro-leaks can lead to:\nInconsistent fuel flow and pressure variations\nCavitation and premature wear of components\nErratic engine performance and starting issues\nPotential fuel leakage, posing fire or safety risks\nTraditionally, leak detection relied on manual visual inspection under submerged conditions. However, such methods are time-consuming, subjective, and less sensitive to micro-level defects.\n**Introducing the Bubble Leak Detection System (BLDS)**\nA Bubble Leak Detection System is an automated, camera-based inspection setup designed to detect and analyze the formation of bubbles in the fuel pump or FCU under controlled test conditions. It combines machine vision, pressure testing, and AI-based analytics to accurately identify even minute leaks that would otherwise go unnoticed.\n**How It Works**\nSetup & Pressurization:\nThe FCU is submerged in the test chamber and subjected to a defined pressure profile.\n**Imaging & Detection:**\nThe vision system continuously monitors the surface. Any bubble formation indicates potential leakage.\n**AI-Driven Analysis:**\nThe software identifies bubble size, rate, and origin using deep learning or optical flow algorithms.\n**Leak Localization & Reporting:**\nThe system pinpoints the exact leak point and automatically generates a digital test report with timestamps and video evidence.\n**Advantages of Automated Bubble Leak Detection**\n✅ High Sensitivity: Detects micro-leaks smaller than 10 microns.\n✅ Repeatability: Eliminates human error and subjectivity.\n✅ Traceability: Automatically logs inspection data for quality audits.\n✅ Non-Destructive Testing (NDT): No physical damage to components.\n✅ Faster Throughput: Enables high-speed testing in production environments.\n**Applications in Fuel Pump & FCU Manufacturing**\nThe BLDS is widely used in:\nAerospace FCU testing for turbine engines\nAutomotive fuel pump quality control\nHydraulic component testing\nInjector and valve leak validation.",
@@ -511,6 +535,8 @@ export class MemStorage implements IStorage {
         featured: false
       },
 
+
+
       
       {
       title: "Barcode Detection & Quality Control",
@@ -521,6 +547,8 @@ export class MemStorage implements IStorage {
         githubUrl: "https://github.com/example/barcode-qc",
         featured: false
       },  
+
+ 
      
       
       {
@@ -541,16 +569,28 @@ export class MemStorage implements IStorage {
     // Seed blog posts
     const initialBlogPosts: InsertBlogPost[] = [
       {
-        title: "Understanding Transformer Architecture in Computer Vision",
+        title: "Introduction to Transformer: Self-Attention and Multi-Head Attention",
         slug: "transformer-architecture-computer-vision",
-        excerpt: "A comprehensive guide to Vision Transformers (ViTs) and how they're revolutionizing image classification tasks with attention mechanisms.",
-        content: "# Understanding Transformer Architecture in Computer Vision\n\nVision Transformers (ViTs) have revolutionized the field of computer vision...",
+        excerpt: "A comprehensive guide Transformers and how they're revolutionizing AI World.",
+        content: "**What is a Transformer?**\n\nThe Transformer is a deep learning model architecture that has revolutionized the field of natural language processing (NLP) and is now making significant strides in computer vision. Introduced in the paper \"Attention is All You Need\" by Vaswani et al. in 2017, the Transformer model relies heavily on a mechanism called self-attention to process input data.\n\n**Self-Attention Mechanism**\n\nSelf-attention allows the model to weigh the importance of different parts of the input data when making predictions. In NLP, this means that the model can focus on relevant words in a sentence regardless of their position. In computer vision, self-attention helps the model to focus on important regions of an image.\n\n**Multi-Head Attention**\n\nMulti-head attention is an extension of the self-attention mechanism. Instead of having a single attention mechanism, the Transformer uses multiple attention heads that operate in parallel. Each head learns to focus on different parts of the input, allowing the model to capture a richer representation of the data.\n\n**Applications in Computer Vision**\n\nTransformers have been successfully applied to various computer vision tasks, including image classification, object detection, and image generation. Vision Transformers (ViTs) have shown competitive performance compared to traditional convolutional neural networks (CNNs), especially when trained on large datasets.\n\nIn summary, the Transformer architecture, with its self-attention and multi-head attention mechanisms, has opened new avenues for advancements in both NLP and computer vision, enabling models to learn complex relationships within data more effectively.",
         category: "Deep Learning",
         imageUrl: "https://images.unsplash.com/photo-1677442p",
         // githubUrl: "https://github.com/example/multi-oc136019-21780ecad995?w=800&h=300&fit=crop",
         readTime: 8,
         published: true
       },
+    // const initialBlogPosts: InsertBlogPost[] = [
+    //   {
+    //     title: "Understanding Transformer Architecture in Computer Vision",
+    //     slug: "transformer-architecture-computer-vision",
+    //     excerpt: "A comprehensive guide to Vision Transformers (ViTs) and how they're revolutionizing image classification tasks with attention mechanisms.",
+    //     content: "# Understanding Transformer Architecture in Computer Vision\n\nVision Transformers (ViTs) have revolutionized the field of computer vision...",
+    //     category: "Deep Learning",
+    //     imageUrl: "https://images.unsplash.com/photo-1677442p",
+    //     // githubUrl: "https://github.com/example/multi-oc136019-21780ecad995?w=800&h=300&fit=crop",
+    //     readTime: 8,
+    //     published: true
+    //   },
 
       {
         title: "Active Learning",
