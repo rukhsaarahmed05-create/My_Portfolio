@@ -9,14 +9,6 @@
       }
     },
     {
-      "src": "api/projects/detail.ts",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/blog-posts/by-slug.ts",
-      "use": "@vercel/node"
-    },
-    {
       "src": "api/**/*.ts",
       "use": "@vercel/node",
       "config": {
@@ -32,6 +24,10 @@
     {
       "src": "/api/projects/([0-9]+)",
       "dest": "/api/projects/[id].ts?id=$1"
+    },
+    {
+      "src": "/api/blog-posts/([a-z0-9-]+)",
+      "dest": "/api/blog-posts/by-slug.ts?slug=$1"
     },
     {
       "src": "/api/(.*)",

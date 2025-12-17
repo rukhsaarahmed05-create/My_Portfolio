@@ -42,12 +42,6 @@ const { data: blogPosts, isLoading } = useQuery<BlogPost[]>({
 
 
 
-
-
-
-
-
-
   const getCategoryColor = (category: string) => {
     const colorMap: Record<string, string> = {
       "Deep Learning": "bg-violet-100 dark:bg-violet-900/30 text-violet-800 dark:text-violet-300",
