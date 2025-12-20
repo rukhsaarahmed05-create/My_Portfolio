@@ -73,7 +73,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-1">Email</h3>
-                  <p className="text-slate-600 dark:text-slate-400">[your-email@domain.com]</p>
+                  <p className="text-slate-600 dark:text-slate-400">rukhsar101095@gmail.com</p>
                 </div>
               </div>
               
@@ -85,7 +85,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-1">LinkedIn</h3>
-                  <p className="text-slate-600 dark:text-slate-400">[your-linkedin-profile]</p>
+                  <p className="text-slate-600 dark:text-slate-400">www.linkedin.com/in/rukhsar-ahmed-3598aa138</p>
                 </div>
               </div>
               
@@ -97,7 +97,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-1">GitHub</h3>
-                  <p className="text-slate-600 dark:text-slate-400">[your-github-username]</p>
+                  <p className="text-slate-600 dark:text-slate-400">https://github.com/Rukhsar111</p>
                 </div>
               </div>
               
@@ -107,7 +107,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-1">Location</h3>
-                  <p className="text-slate-600 dark:text-slate-400">San Francisco, CA</p>
+                  <p className="text-slate-600 dark:text-slate-400">Faridabad, India</p>
                 </div>
               </div>
             </div>
