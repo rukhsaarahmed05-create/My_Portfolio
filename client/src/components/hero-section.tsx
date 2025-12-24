@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { FileDown } from "lucide-react";
 
 export function HeroSection() {
   const scrollToProjects = () => {
@@ -33,8 +34,16 @@ export function HeroSection() {
               <Button 
                 variant="outline"
                 className="border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 px-8 py-3 rounded-lg font-medium"
+                asChild
               >
-                Download Resume
+                <a 
+                  href="/Images/Resume.pdf" 
+                  download="Rukhsar_Ahmed_Resume.pdf"
+                  className="inline-flex items-center"
+                >
+                  <FileDown className="h-4 w-4 mr-2" />
+                  Download Resume
+                </a>
               </Button>
             </div>
           </div>
