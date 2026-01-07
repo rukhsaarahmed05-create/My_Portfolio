@@ -103,27 +103,55 @@ export class MemStorage implements IStorage {
       // },
 
 
+      // {
+      //   title: "Engraved Text on Metal Components: Challenges and Insights",
+      //   description: "In industrial environments, capturing clear and readable text from metal components is essential for traceability, quality verification, and automated inspection workflows. The image shown here depicts a cast metal  a mechanical Automotive  component, which is  part of an engine casing , featuring a faint engraved alphanumeric identification code. These markings usually represent part numbers, batch codes, or manufacturing identifiers.\n Although such markings are critical, making them readable through a camera—especially in automated systems—can be surprisingly difficult. The surface of the component in this case is highly textured cast metal, creating unpredictable reflections and making the engraved characters blend into the background.\n**Key Challenges in Reading Engraved Text**\n**1.Surface Texture & Reflections:**\nThe rough, uneven surface of cast metal causes light to scatter in complex ways. This leads to glare spots and shadows that obscure parts of the engraving.\n**2. Low Contrast:**\nEngraved text often lacks sufficient contrast against the metal background, especially if the engraving is shallow or worn over time.\n**3.Variable Lighting Conditions:**\nIn industrial settings, lighting can vary significantly—harsh overhead lights, ambient daylight, or even dim environments—further complicating image capture.\n**4.Angle & Perspective Distortion:**\nCameras positioned at non-ideal angles can introduce perspective distortion, making characters appear skewed or compressed.\n**5. Oil, Dust, and Residue**\n Manufacturing environments introduce contamination that degrades image quality and further reduces readability.\n**Techniques for Improving Readability**\nTo enhance the visibility of engraved text on metal components several image processing techniques can be employed.\n1.Controlled Lighting:Using diffuse lighting setups or ring lights to minimize harsh reflections.\n2.Image Preprocessing:Applying filters such as histogram equalization, edge detection (e.g., Canny), and contrast enhancement to highlight engraved features.\n3.OCR:Training OCR models specifically on images of engraved text to improve recognition accuracy despite challenging conditions.\nBy addressing these challenges with a combination of hardware setup and software processing, it is possible to reliably read engraved text on metal components—enabling effective automation in quality control and inventory management processes.",
+      //   category: "Industrial AI",
+      //   technologies: ["OpenCV", "ZBar", "Python", "Image Processing"],
+      //   imageUrl: "/Images/Engraved_Metal/OCR_display.png",
+
+      //   additionalImages: [
+      //     "/Images/Engraved_Metal/0 (2).jpg",
+      //     "/Images/Engraved_Metal/0.jpg",
+      //     "/Images/Engraved_Metal/1 (2).jpg",
+      //     // "/Images/Engraved_Metal/2 (2).jpg",
+      //     "/Images/Engraved_Metal/2.jpg",
+      //     "/Images/Engraved_Metal/4.jpg",
+      //     "/Images/Engraved_Metal/Screenshot from 2025-08-22 12-59-35.png",
+      //     "/Images/Engraved_Metal/8.jpg"
+      //   ],
+
+      //   githubUrl: "https://github.com/example/barcode-qc",
+      //   featured: false
+      // }, 
+
+
+
       {
-        title: "Engraved Text on Metal Components: Challenges and Insights",
-        description: "In industrial environments, capturing clear and readable text from metal components is essential for traceability, quality verification, and automated inspection workflows. The image shown here depicts a cast metal mechanical component, likely part of an engine casing or gearbox housing, featuring a faint engraved alphanumeric identification code. These markings usually represent part numbers, batch codes, or manufacturing identifiers.\n Although such markings are critical, making them readable through a camera—especially in automated systems—can be surprisingly difficult. The surface of the component in this case is highly textured cast metal, creating unpredictable reflections and making the engraved characters blend into the background.\n**Key Challenges in Reading Engraved Text**\n 1. Surface Texture & Reflections:\nThe rough, uneven surface of cast metal causes light to scatter in complex ways. This leads to glare spots and shadows that obscure parts of the engraving.\n2. Low Contrast:\nEngraved text often lacks sufficient contrast against the metal background, especially if the engraving is shallow or worn over time.\n3. Variable Lighting Conditions:\nIn industrial settings, lighting can vary significantly—harsh overhead lights, ambient daylight, or even dim environments—further complicating image capture.\n4. Angle & Perspective Distortion:\nCameras positioned at non-ideal angles can introduce perspective distortion, making characters appear skewed or compressed.\n 5. Oil, Dust, and Residue\n Manufacturing environments introduce contamination that degrades image quality and further reduces readability.\n**Techniques for Improving Readability**\nTo enhance the visibility of engraved text on metal components, several image processing techniques can be employed:\n- Controlled Lighting: Using diffuse lighting setups or ring lights to minimize harsh reflections.\n- Image Preprocessing: Applying filters such as histogram equalization, edge detection (e.g., Canny), and contrast enhancement to highlight engraved features.\n- Multi-Angle Imaging: Capturing images from multiple angles to find the best view of the engraving.\n- Machine Learning OCR: Training OCR models specifically on images of engraved text to improve recognition accuracy despite challenging conditions.\nBy addressing these challenges with a combination of hardware setup and software processing, it is possible to reliably read engraved text on metal components—enabling effective automation in quality control and inventory management processes.",
-        category: "Industrial AI",
-        technologies: ["OpenCV", "ZBar", "Python", "Image Processing"],
-        imageUrl: "/Images/Engraved_Metal/OCR_display.png",
+        title: "AI-Powered Engine OCR: Automating Text and Number Recognition in Manufacturing",
+        description: "In today’s smart factories, precision and traceability are as important as quality. Every engine produced must carry a unique set of identifiers—such as serial numbers, VIN codes, and batch IDs—that ensure traceability across the supply chain. Traditionally, these identifiers are read and verified manually, which is:\nSlow\nError-prone\nHard to scale\nWith AI-powered Optical Character Recognition (OCR), manufacturers can now automate the reading and verification of engine numbers, ensuring 100% accuracy, speed, and compliance in real time.\n**Why Engine OCR Matters**\nEngines are stamped or engraved with critical identifiers, but these markings often come with challenges:\nNon-uniform surfaces (metal textures, engravings)\nVariable lighting in factory environments\nDirt, oil, or glare obstructing the text\nDifferent fonts and character styles\nMissing or misreading a single digit can cause traceability failures, leading to warranty disputes, compliance violations, and massive losses.\nEngine OCR solves this by using computer vision + deep learning to reliably detect and read text under challenging real-world conditions.\n**How the Solution Works**\n**1. Image Capture**\nHigh-resolution industrial cameras capture engine surfaces in real time.\nMultiple angles and lighting adjustments ensure visibility of all engraved or printed text.\n**2. Preprocessing & Augmentations**\nRaw images undergo preprocessing for maximum readability:\nContrast enhancement\nGlare and reflection removal\nAdaptive thresholding\nPerspective correction\nThese steps make text clearer before OCR runs.\n**3. OCR with Deep Learning**\nWe integrate state-of-the-art OCR models like PaddleOCR, Tesseract with deep learning backends, or transformer-based OCR models. These models extract engine identifiers such as:\nEngine Number\nVIN Code\nBatch/Serial IDs\n**4. Verification & Validation**\nExtracted text is compared with ERP/MES system records:\n✅ If text matches expected values → OK\n❌ If mismatch or unreadable → NG, triggering alerts for manual inspection.\n**Business Benefits of Engine OCR**\nTraceability at Scale\nEvery engine gets verified instantly.\nEnsures compliance with industry regulations and warranty requirements.\n**Error Reduction**\nEliminates human mistakes in reading complex alphanumeric codes.\n**Speed & Efficiency**\nInspections run in real time, keeping pace with production lines.\n**Cost Savings**\nPrevents defective or mislabeled engines from shipping.\nReduces warranty claims and legal disputes.\n**Analytics & Insights**\nOCR logs provide traceability across the entire supply chain.\n**Real-World Applications**\nAutomotive Plants: Reading and validating VINs & engine serials at assembly.\nHeavy Machinery: Ensuring engines are tracked from production to delivery.\nAerospace: Verifying engraved part IDs for compliance with safety standards.\n**Conclusion**\nAI-powered Engine OCR is redefining how manufacturers handle traceability and compliance. By combining high-resolution imaging, preprocessing, and deep learning-based OCR models, enterprises can ensure every engine is properly identified, logged, and verified—at scale, in real time. ",
+        category: "Automotive  AI",
+        technologies: ["OCR", "Python", "OpenCV", "Image Processing"],
+        imageUrl: "/Images/Hero-ocrold/78_.jpg",
+       
 
-        additionalImages: [
-          "/Images/Engraved_Metal/0 (2).jpg",
-          "/Images/Engraved_Metal/0.jpg",
-          "/Images/Engraved_Metal/1 (2).jpg",
-          // "/Images/Engraved_Metal/2 (2).jpg",
-          "/Images/Engraved_Metal/2.jpg",
-          "/Images/Engraved_Metal/4.jpg",
-          "/Images/Engraved_Metal/Screenshot from 2025-08-22 12-59-35.png",
-          "/Images/Engraved_Metal/8.jpg"
+        additionalImages: [  
+        "/Images/Hero-ocrold/6388_.png",
+        "/Images/Hero-ocrold/6401_.png",
+        "/Images/Hero-ocrold/6405_.png",
+        "/Images/Hero-ocrold/6406_.png",
+        "/Images/Hero-ocrold/6410_.png",
+        "/Images/Hero-ocrold/6414_.png",
+        "/Images/Hero-ocrold/6417_.png",
+        "/Images/Hero-ocrold/6419_.png",
+        "/Images/Hero-ocrold/6422_.png",
+        "/Images/Hero-ocrold/6424_.png",
+        "/Images/Hero-ocrold/6426_.png",
+        
         ],
-
-        githubUrl: "https://github.com/example/barcode-qc",
+        githubUrl: "https://github.com/example/automotive-ocr",
         featured: false
-      }, 
+      },
 
 
       {
@@ -131,7 +159,7 @@ export class MemStorage implements IStorage {
         subtitle: "AI-Powered cracks and Dents Detection System",
         description: "Shiny metal components like faucets, taps, shower fittings, and sanitary ware must meet the highest standards of surface finish and durability. Even small defects such as cracks, dents, scratches, or water marks can compromise quality and result in costly rework or rejection. Traditional manual inspection struggles with reflective surfaces and tiny imperfections, making AI-powered defect detection a powerful solution.\n In this post, we’ll walk through the complete workflow of building a defect detection system for shiny metal parts — covering data acquisition, defect labeling, model training, multi-camera inspection, and deployment.\n\n**Common Defects in Shiny Metal Parts**\nCracks – fine lines or fractures that weaken the structure.\nDents – visible depressions caused during machining or handling.\nSurface Defects – scratches, abrasions, or uneven polishing.\nHoles – unwanted gaps or voids in cast or machined parts.\nUnfinished Parts – incomplete machining or missing polishing steps.\nWater Marks – spots or stains left during cleaning or plating.\nEach defect can appear differently depending on lighting, viewing angle, or polish level, making inspection especially challenging.\n\n**Step 1: Data Acquisition**\nSince shiny surfaces reflect light, capturing defects consistently is the biggest challenge. A multi-camera setup is used:\nMultiple View Angles: Top, side, and oblique views ensure no defect is hidden.\nControlled Lighting: Diffused dome or ring lights minimize glare and highlight surface inconsistencies.\nHigh-Resolution Cameras: Industrial cameras capture fine cracks and surface textures.\nTriggering System: Parts are placed on a rotating jig or conveyor, and synchronized cameras capture frames.\nThis results in a rich dataset covering all possible defect orientations.\n**Step 2: Data Annotation**\nDefect regions are annotated using bounding boxes, polygons, or segmentation masks.\nClasses include crack, dent, scratch, hole, unfinished, watermark.\nAnnotation tools like CVAT, Labelme, or Supervisely help create consistent labels.\nSince defects can be tiny, pixel-level annotation (segmentation) often works better than just bounding boxes.\n**Step 3: Model Training**\nFor shiny metal defect detection, a combination of object detection and anomaly detection works best:\nObject Detection (YOLOv8, Faster R-CNN): For visible, localized defects like dents or holes.\nSegmentation Models (U-Net, Mask R-CNN, Segment Anything): For detailed defect area localization\n**Step 4: Multi-Camera Inference Pipeline\nFor shiny metal parts like faucets and sanitary ware, a single camera cannot cover the full geometry due to reflections and hidden surfaces. To overcome this, the inspection system uses three synchronized cameras and a rotary mechanism:\n**Trigger-Based Capture**\nA rotary fixture holds the part and rotates it 360° in fixed increments.\nAt each rotation step, a trigger signal synchronizes all three cameras to capture images simultaneously.\nThis ensures complete coverage from three perspectives (front, side, angled view)\n**Image Processing Flow**\nEach camera sends images to the inference server.\nThe defect detection model (YOLO, Anomalib, or hybrid) analyzes every frame for cracks, dents, scratches, water marks, etc.\nResults are timestamped and indexed with the camera ID + rotation angle.\n**Multi-View Fusion**\nDefect detections are aggregated across all cameras and rotation steps\nIf any camera detects a defect at any angle, the part is flagged as NG (Not Good).\nOtherwise, after completing the full 360° rotation, the part is classified as OK.\n**Real-Time Feedback**\nThe system communicates with a PLC or rejection mechanism\nNG parts are automatically separated from the conveyor/assembly line.\nA dashboard UI displays the captured views, defect highlights (bounding boxes/heatmaps), and final decision\nThis multi-camera + rotary setup ensures 100% surface coverage with minimal blind spots, even for highly reflective metallic parts.",
         category: "Manufacturing AI",
-        technologies: ["PyTorch", "ResNet", "OpenCV"],
+        technologies: ["PyTorch", "Defect Detection", "Segmentation", "360 degree Inspection"],
         imageUrl: "/Images/Jaquar2/2025-08-25_15-01-18_.jpg",
         
         
@@ -381,30 +409,54 @@ export class MemStorage implements IStorage {
 
 
       {
-        title: "AI-Powered Engine OCR: Automating Text and Number Recognition in Manufacturing",
-        description: "In today’s smart factories, precision and traceability are as important as quality. Every engine produced must carry a unique set of identifiers—such as serial numbers, VIN codes, and batch IDs—that ensure traceability across the supply chain. Traditionally, these identifiers are read and verified manually, which is:\nSlow\nError-prone\nHard to scale\nWith AI-powered Optical Character Recognition (OCR), manufacturers can now automate the reading and verification of engine numbers, ensuring 100% accuracy, speed, and compliance in real time.\n**Why Engine OCR Matters**\nEngines are stamped or engraved with critical identifiers, but these markings often come with challenges:\nNon-uniform surfaces (metal textures, engravings)\nVariable lighting in factory environments\nDirt, oil, or glare obstructing the text\nDifferent fonts and character styles\nMissing or misreading a single digit can cause traceability failures, leading to warranty disputes, compliance violations, and massive losses.\nEngine OCR solves this by using computer vision + deep learning to reliably detect and read text under challenging real-world conditions.\n**How the Solution Works**\n**1. Image Capture**\nHigh-resolution industrial cameras capture engine surfaces in real time.\nMultiple angles and lighting adjustments ensure visibility of all engraved or printed text.\n**2. Preprocessing & Augmentations**\nRaw images undergo preprocessing for maximum readability:\nContrast enhancement\nGlare and reflection removal\nAdaptive thresholding\nPerspective correction\nThese steps make text clearer before OCR runs.\n**3. OCR with Deep Learning**\nWe integrate state-of-the-art OCR models like PaddleOCR, Tesseract with deep learning backends, or transformer-based OCR models. These models extract engine identifiers such as:\nEngine Number\nVIN Code\nBatch/Serial IDs\n**4. Verification & Validation**\nExtracted text is compared with ERP/MES system records:\n✅ If text matches expected values → OK\n❌ If mismatch or unreadable → NG, triggering alerts for manual inspection.\n**Business Benefits of Engine OCR**\nTraceability at Scale\nEvery engine gets verified instantly.\nEnsures compliance with industry regulations and warranty requirements.\n**Error Reduction**\nEliminates human mistakes in reading complex alphanumeric codes.\n**Speed & Efficiency**\nInspections run in real time, keeping pace with production lines.\n**Cost Savings**\nPrevents defective or mislabeled engines from shipping.\nReduces warranty claims and legal disputes.\n**Analytics & Insights**\nOCR logs provide traceability across the entire supply chain.\n**Real-World Applications**\nAutomotive Plants: Reading and validating VINs & engine serials at assembly.\nHeavy Machinery: Ensuring engines are tracked from production to delivery.\nAerospace: Verifying engraved part IDs for compliance with safety standards.\n**Conclusion**\nAI-powered Engine OCR is redefining how manufacturers handle traceability and compliance. By combining high-resolution imaging, preprocessing, and deep learning-based OCR models, enterprises can ensure every engine is properly identified, logged, and verified—at scale, in real time. ",
-        category: "Automotive  AI",
-        technologies: ["OCR", "Python", "OpenCV", "Image Processing"],
-        imageUrl: "/Images/Hero-ocrold/78_.jpg",
+        title: "Engraved Text on Metal Components: Challenges and Insights",
+        description: "In industrial environments, capturing clear and readable text from metal components is essential for traceability, quality verification, and automated inspection workflows. The image shown here depicts a cast metal  a mechanical Automotive  component, which is  part of an engine casing , featuring a faint engraved alphanumeric identification code. These markings usually represent part numbers, batch codes, or manufacturing identifiers.\n Although such markings are critical, making them readable through a camera—especially in automated systems—can be surprisingly difficult. The surface of the component in this case is highly textured cast metal, creating unpredictable reflections and making the engraved characters blend into the background.\n**Key Challenges in Reading Engraved Text**\n**1.Surface Texture & Reflections:**\nThe rough, uneven surface of cast metal causes light to scatter in complex ways. This leads to glare spots and shadows that obscure parts of the engraving.\n**2. Low Contrast:**\nEngraved text often lacks sufficient contrast against the metal background, especially if the engraving is shallow or worn over time.\n**3.Variable Lighting Conditions:**\nIn industrial settings, lighting can vary significantly—harsh overhead lights, ambient daylight, or even dim environments—further complicating image capture.\n**4.Angle & Perspective Distortion:**\nCameras positioned at non-ideal angles can introduce perspective distortion, making characters appear skewed or compressed.\n**5. Oil, Dust, and Residue**\n Manufacturing environments introduce contamination that degrades image quality and further reduces readability.\n**Techniques for Improving Readability**\nTo enhance the visibility of engraved text on metal components several image processing techniques can be employed.\n1.Controlled Lighting:Using diffuse lighting setups or ring lights to minimize harsh reflections.\n2.Image Preprocessing:Applying filters such as histogram equalization, edge detection (e.g., Canny), and contrast enhancement to highlight engraved features.\n3.OCR:Training OCR models specifically on images of engraved text to improve recognition accuracy despite challenging conditions.\nBy addressing these challenges with a combination of hardware setup and software processing, it is possible to reliably read engraved text on metal components—enabling effective automation in quality control and inventory management processes.",
+        category: "Industrial AI",
+        technologies: ["OpenCV", "ZBar", "Python", "Image Processing"],
+        imageUrl: "/Images/Engraved_Metal/OCR_display.png",
+
+        additionalImages: [
+          "/Images/Engraved_Metal/0 (2).jpg",
+          "/Images/Engraved_Metal/0.jpg",
+          "/Images/Engraved_Metal/1 (2).jpg",
+          // "/Images/Engraved_Metal/2 (2).jpg",
+          "/Images/Engraved_Metal/2.jpg",
+          "/Images/Engraved_Metal/4.jpg",
+          "/Images/Engraved_Metal/Screenshot from 2025-08-22 12-59-35.png",
+          "/Images/Engraved_Metal/8.jpg"
+        ],
+
+        githubUrl: "https://github.com/example/barcode-qc",
+        featured: false
+      }, 
+
+
+
+      // {
+      //   title: "AI-Powered Engine OCR: Automating Text and Number Recognition in Manufacturing",
+      //   description: "In today’s smart factories, precision and traceability are as important as quality. Every engine produced must carry a unique set of identifiers—such as serial numbers, VIN codes, and batch IDs—that ensure traceability across the supply chain. Traditionally, these identifiers are read and verified manually, which is:\nSlow\nError-prone\nHard to scale\nWith AI-powered Optical Character Recognition (OCR), manufacturers can now automate the reading and verification of engine numbers, ensuring 100% accuracy, speed, and compliance in real time.\n**Why Engine OCR Matters**\nEngines are stamped or engraved with critical identifiers, but these markings often come with challenges:\nNon-uniform surfaces (metal textures, engravings)\nVariable lighting in factory environments\nDirt, oil, or glare obstructing the text\nDifferent fonts and character styles\nMissing or misreading a single digit can cause traceability failures, leading to warranty disputes, compliance violations, and massive losses.\nEngine OCR solves this by using computer vision + deep learning to reliably detect and read text under challenging real-world conditions.\n**How the Solution Works**\n**1. Image Capture**\nHigh-resolution industrial cameras capture engine surfaces in real time.\nMultiple angles and lighting adjustments ensure visibility of all engraved or printed text.\n**2. Preprocessing & Augmentations**\nRaw images undergo preprocessing for maximum readability:\nContrast enhancement\nGlare and reflection removal\nAdaptive thresholding\nPerspective correction\nThese steps make text clearer before OCR runs.\n**3. OCR with Deep Learning**\nWe integrate state-of-the-art OCR models like PaddleOCR, Tesseract with deep learning backends, or transformer-based OCR models. These models extract engine identifiers such as:\nEngine Number\nVIN Code\nBatch/Serial IDs\n**4. Verification & Validation**\nExtracted text is compared with ERP/MES system records:\n✅ If text matches expected values → OK\n❌ If mismatch or unreadable → NG, triggering alerts for manual inspection.\n**Business Benefits of Engine OCR**\nTraceability at Scale\nEvery engine gets verified instantly.\nEnsures compliance with industry regulations and warranty requirements.\n**Error Reduction**\nEliminates human mistakes in reading complex alphanumeric codes.\n**Speed & Efficiency**\nInspections run in real time, keeping pace with production lines.\n**Cost Savings**\nPrevents defective or mislabeled engines from shipping.\nReduces warranty claims and legal disputes.\n**Analytics & Insights**\nOCR logs provide traceability across the entire supply chain.\n**Real-World Applications**\nAutomotive Plants: Reading and validating VINs & engine serials at assembly.\nHeavy Machinery: Ensuring engines are tracked from production to delivery.\nAerospace: Verifying engraved part IDs for compliance with safety standards.\n**Conclusion**\nAI-powered Engine OCR is redefining how manufacturers handle traceability and compliance. By combining high-resolution imaging, preprocessing, and deep learning-based OCR models, enterprises can ensure every engine is properly identified, logged, and verified—at scale, in real time. ",
+      //   category: "Automotive  AI",
+      //   technologies: ["OCR", "Python", "OpenCV", "Image Processing"],
+      //   imageUrl: "/Images/Hero-ocrold/78_.jpg",
        
 
-        additionalImages: [  
-        "/Images/Hero-ocrold/6388_.png",
-        "/Images/Hero-ocrold/6401_.png",
-        "/Images/Hero-ocrold/6405_.png",
-        "/Images/Hero-ocrold/6406_.png",
-        "/Images/Hero-ocrold/6410_.png",
-        "/Images/Hero-ocrold/6414_.png",
-        "/Images/Hero-ocrold/6417_.png",
-        "/Images/Hero-ocrold/6419_.png",
-        "/Images/Hero-ocrold/6422_.png",
-        "/Images/Hero-ocrold/6424_.png",
-        "/Images/Hero-ocrold/6426_.png",
+      //   additionalImages: [  
+      //   "/Images/Hero-ocrold/6388_.png",
+      //   "/Images/Hero-ocrold/6401_.png",
+      //   "/Images/Hero-ocrold/6405_.png",
+      //   "/Images/Hero-ocrold/6406_.png",
+      //   "/Images/Hero-ocrold/6410_.png",
+      //   "/Images/Hero-ocrold/6414_.png",
+      //   "/Images/Hero-ocrold/6417_.png",
+      //   "/Images/Hero-ocrold/6419_.png",
+      //   "/Images/Hero-ocrold/6422_.png",
+      //   "/Images/Hero-ocrold/6424_.png",
+      //   "/Images/Hero-ocrold/6426_.png",
         
-        ],
-        githubUrl: "https://github.com/example/automotive-ocr",
-        featured: false
-      },
+      //   ],
+      //   githubUrl: "https://github.com/example/automotive-ocr",
+      //   featured: false
+      // },
 
 
       {
